@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Blog.css';
 import BlogCart from '../Blog-cart/Blog-cart';
+import { toast } from 'react-toastify';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
@@ -17,7 +18,20 @@ const Blog = () => {
     }
 
     const onBookmark = (id) => {
-        setBookmarkedIDs([...bookmarkedIDs, id]);
+        if (bookmarkedIDs.indexOf(id) === -1) {
+            setBookmarkedIDs([...bookmarkedIDs, id]);
+            return;
+        }
+        toast.info("Already Bookmarked!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 
     return (
