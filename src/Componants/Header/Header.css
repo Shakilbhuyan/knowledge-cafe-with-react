@@ -1,0 +1,25 @@
+.header{
+    height: 80px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav.header a{
+    text-decoration: none;
+    color:black;
+    margin-left: 10px;
+}
+
+nav.header a:hover{
+    color: crimson;
+}
+
+@media screen and (max-width: 576px){
+    
+    .header{
+        flex-direction: column;
+    }
+}
