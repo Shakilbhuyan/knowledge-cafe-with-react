@@ -1,7 +1,7 @@
 import React from 'react';
 import './Blog-cart.css';
 import {FaBookmark} from "react-icons/fa";
-const BlogCart = ({ blog }) => {
+const BlogCart = ({ blog, onRead, onBookmark}) => {
     const { name, title, authorImg, date, coverImg, readTime } = blog;
     return (
         <div className='blog-cart-container'>
@@ -17,11 +17,11 @@ const BlogCart = ({ blog }) => {
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: "5px"}}>
                         <p>{readTime} min read</p>
-                        <FaBookmark />
+                        <FaBookmark onClick={onBookmark}/>
                     </div>
                 </div>
                 <h2>{title}</h2>
-                <button className='btn-read'>Mark as read</button>
+                <button className='btn-read' onClick={onRead}>Mark as read</button>
             </div>
         </div>
     );
