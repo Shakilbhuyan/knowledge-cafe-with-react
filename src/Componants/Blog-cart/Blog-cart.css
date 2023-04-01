@@ -1,0 +1,28 @@
+.blog-cart-container{
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.cover-img{
+    width: 350px;
+    height: 350px;
+}
+.author-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:576px){
+    .cover-img{
+        width: 100px;
+        height: 100px;
+    }
+    .author-img{
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+    } 
+}

@@ -17,6 +17,12 @@ nav.header a:hover{
     color: crimson;
 }
 
+img{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
 @media screen and (max-width: 576px){
     
     .header{
