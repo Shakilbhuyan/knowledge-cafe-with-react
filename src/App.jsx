@@ -4,6 +4,7 @@ import Header from './Componants/Header/Header'
 import Blog from './Componants/Blog/Blog'
 import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import Question from './Componants/Question/Question';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       <Header></Header>
       <Blog></Blog>
       <ToastContainer />
+      <Question></Question>
     </div>
   )
 }
